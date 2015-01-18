@@ -41,9 +41,7 @@ Example usage (main.go):
 			// already logged in
 		}
 
-		userid := ... look up user by email and verify password ...
-
-		user := LoginManager.LoadUser(userid)
+		user := ... look up user by email and verify password ...
 
 		if user != nil {
 			LoginManager.LoginUser(user, w, r)
