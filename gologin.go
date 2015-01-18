@@ -53,7 +53,7 @@ func (gl *GoLogin) LogoutUser(w http.ResponseWriter, r *http.Request) error {
 
 // Check if the user for this request is logged in
 func (gl *GoLogin) IsLoggedIn(r *http.Request) bool {
-	session, err := gl.CookieStore.Get(r, "user")
+	session, err := gl.CookieStore.Get(r, SESSION_NAME)
 	if err != nil {
 		return false
 	}
